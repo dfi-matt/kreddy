@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Kreddy.MK | User Dashboard</title>
+
+	<meta name="description" content="Page Description Here">
+
+	<meta property="og:url" content="##URL##" />
+	<meta property="og:title" content="OG Title" />
+	<meta property="og:description" content="OG Description" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="images/og_image.png" />
+
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone4.png" />
+
+	<link rel="icon" href="images/favicon.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/tileicon.png">
+
+	<!--Font-->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="fa/fontawesome-all.min.css">
+	<!--Bootstrap CSS-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--No UI Slider-->
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<!--Stylesheet-->
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="has-internal-header">
+	<header class="white-bg">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-3 d-block d-lg-none">
+					<ul id="mobile-account-nav">
+						<li>
+							<a class="dropdown-toggle" href="#" id="navbarDropdown">
+								<i class="fas fa-user-circle"></i>
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="dashboard.html">My Loan</a>
+								<a class="dropdown-item" href="dashboard-details.html">My Details</a>
+								<a class="dropdown-item" href="dashboard-history.html">Application History</a>
+								<a class="dropdown-item" href="dashboard-repayments.html">How to Pay</a>
+								<a class="dropdown-item" href="dashboard-upload.html">Upload Documents</a>									
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="index.html">Logout</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-6 col-lg-2">
+					<a href="index.html" class="logo">
+						<img src="images/kreddy_logo.png" alt="Kreddy">
+					</a>
+				</div><!--End Col 2-->
+				<div class="col-3 col-lg-10">
+					<nav class="d-none d-lg-block">
+						<ul>
+							<li><a href="how-to-apply.html">How to Apply</a></li>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="repayments.html">Repayments</a></li>
+							<li>
+								<span class="language-selector icon-ru">
+									<ul>
+										<li><a href="#" class="icon-ru" data-lang="ru">Русский</a></li>
+										<li><a href="#" class="icon-ro" data-lang="ro">Romanian</a></li>
+									</ul>
+								</span>
+							</li>
+							<li>
+								<a class="dropdown-toggle" href="#" id="navbarDropdown">
+									Your Account
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="dashboard.html">My Loan</a>
+									<a class="dropdown-item" href="dashboard-details.html">My Details</a>
+									<a class="dropdown-item" href="dashboard-history.html">Application History</a>
+									<a class="dropdown-item" href="dashboard-repayments.html">How to Pay</a>
+									<a class="dropdown-item" href="dashboard-upload.html">Upload Documents</a>									
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="index.html">Logout</a>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="nav-icon d-block d-lg-none">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div><!--End Nav Icon-->
+				</div><!--End Col 10-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</header>
+	<main class="bump-bottom-md bump-top-md">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 bump-bottom-sm">
+					<div class="row">
+						<div class="col-md-6 bump-bottom-sm">
+							<h1>Welcome back, Matthew!</h1>
+						</div><!--End Col 6-->
+						<div class="col-md-6 align-self-center bump-bottom-sm d-none d-md-block">
+							<div class="text-center">
+								<button type="submit" class="btn btn-cta btn-lg apply-button apply-button-calculator" id="apply-button-home-main">How to Repay</button>
+							</div>
+						</div><!--End Col 6-->
+					</div><!--End Row-->
+					<div class="row">
+						<div class="col-md-4 bump-bottom-sm">
+							<h5><span class="light">Next Amount Due</span><br>
+							7,046.40 MKD</h5>
+						</div><!--End Col 4-->
+						<div class="col-md-4 bump-bottom-sm">
+							<h5><span class="light">Next Due Date</span><br>
+							30/09/2018</h5>
+						</div><!--End Col 4-->
+						<div class="col-md-4 bump-bottom-sm">
+							<h5><span class="light">Balance Remaining</span><br>
+							14,092.80 MKD</h5>
+						</div><!--End Col 4-->
+					</div><!--End Row-->
+					<div class="text-center d-block d-md-none bump-bottom-sm">
+						<button type="submit" class="btn btn-cta btn-lg apply-button apply-button-calculator" id="apply-button-home-main">How to Repay</button>
+					</div>
+					<div class="box grey-bg d-flex align-items-center bump-bottom-md">
+						<div class="mr-4">
+							<img src="images/icon_extend.png" alt="Extend" style="width: auto; height: 66px;">
+						</div>
+						<div class="p15">
+							For a small fee you can extend the repayment of your loan by up to 12 months.
+							<div class="d-block d-lg-none bump-top-xs">
+								<a href="#" class="btn btn-ghost btn-sm" data-toggle="modal" data-target="#extension">Request Extension</a>
+							</div>
+						</div>
+						<div class="d-none d-lg-block ml-3">
+							<a href="#" class="btn btn-ghost" data-toggle="modal" data-target="#extension">Request Extension</a>
+						</div>
+					</div><!--End Box-->
+					<div class="d-flex align-items-center">
+						<div class="bump-bottom-xs">
+							<h5><span class="light">Repayment Progress</span><br>
+							2 installments remaining</h5>
+						</div>
+						<div class="ml-auto text-right bump-bottom-xs p14 d-none d-lg-block">
+							<strong><a href="#" data-toggle="modal" data-target="#schedule-modal" class="dotted">View Full Repayment Schedule</a></strong>
+						</div>
+					</div><!--End D-Flex-->
+
+					<div class="progress bump-bottom-xs">
+						<div class="progress-bar paid" style="width: 20%"></div>
+						<div class="progress-bar paid" style="width: 20%"></div>
+						<div class="progress-bar paid" style="width: 20%"></div>
+						<div class="progress-bar" style="width: 20%"></div>
+						<div class="progress-bar" style="width: 20%"></div>
+					</div>
+
+					<div class="row bump-bottom-sm">
+						<div class="col">
+							<span class="light">30/05/2018</span><br>
+							<span class="p12 txt-grey">Signed</span>
+						</div>
+						<div class="col text-right">
+							<span class="light">31/10/2018</span><br>
+							<span class="p12 txt-grey">Final Repayment Date</span>
+						</div>
+					</div>
+
+					<div class="row loan-summary">
+						<div class="col-lg-4 bump-bottom-xs">
+							<strong>Loan Summary</strong>
+						</div>
+						<div class="col-lg-8">
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">Loan Ref</span>
+								</div>
+								<div class="ml-auto text-right">
+									151310
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">Loan Amount</span>
+								</div>
+								<div class="ml-auto text-right">
+									30,000 MKD
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">Interest</span>
+								</div>
+								<div class="ml-auto text-right">
+									5,232 MKD
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">APR</span>
+								</div>
+								<div class="ml-auto text-right">
+									0%
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">Extra Fees</span>
+								</div>
+								<div class="ml-auto text-right">
+									0 MKD
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">Number of Installments</span>
+								</div>
+								<div class="ml-auto text-right">
+									5
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">Monthly Repayment</span>
+								</div>
+								<div class="ml-auto text-right">
+									7,046.40 MKD
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex p15">
+								<div>
+									<span class="grey">Total Repayment</span>
+								</div>
+								<div class="ml-auto text-right">
+									35,232 MKD
+								</div>
+							</div><!--End Row-->
+							<div class="loan-detail-row p15" style="border-bottom: none;">
+								<a href="#" class="dotted mr-4"><i class="fas fa-file-pdf"></i> Loan Agreement</a>
+							</div>
+
+						</div><!--End Col 8-->
+					</div><!--End Row-->
+				</div><!--End Col 8-->
+				<div class="col-lg-4">
+					<div class="dashboard-menu">
+						<a href="dashboard.html" class="active">My Loan</a>
+						<a href="dashboard-details.html">My Details</a>
+						<a href="dashboard-history.html">Application History</a>
+						<a href="dashboard-repayments.html">How to Pay</a>
+						<a href="dashboard-upload.html">Upload Documents</a>
+						<a href="index.html">Log Out</a>
+					</div><!--End Loan Details Box-->
+				</div><!--End Col 4-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</main>
+
+	<section id="contact-bar" class="grey-bg pad-top-sm">
+		<div class="container">
+			<div class="row">
+				<div class="offset-xl-1 col-sm-9 col-lg-6 bump-bottom-sm">
+					<h3>Need some help?</h3>
+					<p class="p16">Our operators are ready to help. Just call our number between office hours and we’ll help you complete your application.</p>
+				</div><!--End Col 3-->
+				<div class="col-12 col-lg-4 col-xl-3 bump-bottom-sm">
+					<h3><i class="fas fa-phone"></i> 051/ 492 610</h3>
+					<div class="p16"><i class="far fa-clock fa-fw"></i> Mon - Fri from 09:00 to 20:00<br>
+					<i class="far fa-clock fa-fw"></i> Sat from 09:00 to 17:00</div>
+				</div><!--End Col 3-->
+				<div class="col-lg-2 d-none d-sm-block">
+					<div id="cb-woman"></div>
+				</div><!--End Col 3-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</section><!--End Contact Bar-->
+
+	
+<footer class="pad-top-md pad-bottom-md darkgrey-bg txt-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 bump-bottom-sm align-self-center">
+					<a href="index.html" class="logo">
+						<img src="images/kreddy_logo_white.png" alt="Kreddy">
+					</a>
+				</div><!--End Col 3-->
+				<div class="col-lg-3 bump-bottom-sm">
+					<h5 class="bump-bottom-sm"><a href="index.html">Kreddy</a></h5>
+					<div class="p14">
+						<a href="index.html">Home</a><br>
+						<a href="about.html">About Us</a><br>
+						<a href="contact.html">Contact Us</a><br><br>
+						Select Language &nbsp; &nbsp;
+						<span class="language-selector white icon-ru">
+							<ul>
+								<li><a href="#" class="icon-ru" data-lang="ru">Русский</a></li>
+								<li><a href="#" class="icon-ro" data-lang="ro">Romanian</a></li>
+							</ul>
+						</span>
+					</div>
+				</div><!--End Col 3-->
+				<div class="col-lg-3 bump-bottom-sm">
+					<h5 class="bump-bottom-sm"><a href="start.html">Apply for a Loan</a></h5>
+					<div class="p14">
+						<a href="how-to-apply.html">How to apply</a><br>
+						<a href="repayments.html">Repayments</a><br>
+						<a href="faq.html">FAQ</a><br>
+						<a href="start.html">Apply Now</a>
+					</div>
+				</div><!--End Col 3-->
+				<div class="col-lg-3 bump-bottom-sm">
+					<h5 class="bump-bottom-sm"><a href="contact.html">Contact Us</a></h5>
+					<div class="p14">
+						<i class="fas fa-phone fa-fw"></i> <a href="tel:051492610">051/ 492 610</a><br>
+						<i class="fab fa-whatsapp fa-fw"></i> <a href="tel:065353353">065/ 353 353</a><br>
+						<i class="fas fa-paper-plane fa-fw"></i> <a href="mailto:info@kreddy.mk">info@kreddy.mk</a><br>
+						<i class="fab fa-facebook fa-fw"></i> <a href="#">Facebook</a><br>
+					</div>
+				</div><!--End Col 3-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</footer>
+	<section id="simple-footer" class="pad-top-xs pad-bottom-xs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-center text-md-left">
+					&copy; Copyright Digital Finance 2018
+				</div><!--End col 6-->
+				<div class="col-md-6 text-center text-md-right">
+					<a href="#">Privacy Policy</a> |
+					<a href="#">Terms of Use</a>
+				</div><!--End Col 6-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</section><!--End Simple Footer-->
+
+	<div class="modal fade" id="schedule-modal" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="container">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h3 class="bump-top-sm bump-bottom-sm text-center">Repayment Schedule</h3>
+					<table class="table table-bordered table-sm table-hover table-sm-responsive table-schedule">
+						<thead class="grey-bg">
+							<tr>
+								<th scope="col" style="width: 5%;">#</th>
+								<th scope="col" style="width: 35%;">Date</th>
+								<th scope="col" style="width: 20%;">Principal</th>
+								<th scope="col" style="width: 20%;">Interest</th>
+								<th scope="col" style="width: 20%;">Balance</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>30/09/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>90,000 MKD</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>31/10/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>80,000 MKD</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>30/11/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>70,000 MKD</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>31/12/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>60,000 MKD</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>31/01/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>50,000 MKD</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>31/01/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>40,000 MKD</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>28/02/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>30,000 MKD</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>31/03/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>20,000 MKD</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>30/04/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>10,000 MKD</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>31/05/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>0 MKD</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!--End Container-->
+			</div><!--End Model Content-->
+		</div><!--End Modal Dialogue-->
+	</div><!--End Schedule Modal-->
+
+	<div id="mobile-menu">
+		<h5>Main Menu</h5>
+		<a href="how-to-apply.html">How to Apply</a>
+		<a href="faq.html">FAQ</a>
+		<a href="repayments.html">Repayments</a>
+		<a href="tel:051492610"><i class="fas fa-phone fa-fw"></i> 051/ 492 610</a>
+		<a href="#"><i class="fas fa-flag fa-fw"></i> Рус / Rom</a>		
+		<br>
+		<a href="start.html" class="btn btn-cta btn-lg" style="margin: 0 auto; width: 85%;">Apply Now</a>
+	</div><!--End Mobile Menu-->
+
+	<!--Scripts-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
+	<script src="js/util.min.js"></script>
+	<script src="js/modal.min.js"></script>
+	<script src="js/jquery.inputmask.min.js"></script>
+	<script src="js/wNumb.min.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/repaymentcalculator.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>

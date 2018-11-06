@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Kreddy.MK | Apply | Step 2</title>
+
+	<meta name="description" content="Page Description Here">
+
+	<meta property="og:url" content="##URL##" />
+	<meta property="og:title" content="OG Title" />
+	<meta property="og:description" content="OG Description" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="images/og_image.png" />
+
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone4.png" />
+
+	<link rel="icon" href="images/favicon.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/tileicon.png">
+
+
+	<!--Font-->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="fa/fontawesome-all.min.css">
+	<!--Bootstrap CSS-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!--No UI Slider-->
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<!--Stylesheet-->
+	<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+</style>
+
+</head>
+<body class="has-internal-header">
+	<header class="white-bg">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-3 d-block d-lg-none">
+					<a href="login.html" class="btn btn-micro btn-cta">Login</a>
+				</div>
+				<div class="col-6 col-lg-2">
+					<a href="index.html" class="logo">
+						<img src="images/kreddy_logo.png" alt="Kreddy">
+					</a>
+				</div><!--End Col 2-->
+				<div class="col-3 col-lg-10">
+					<nav class="d-none d-lg-block">
+						<ul>
+							<li><a href="how-to-apply.html">How to Apply</a></li>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="repayments.html">Repayments</a></li>
+							<li>
+								<span class="language-selector icon-ru">
+									<ul>
+										<li><a href="#" class="icon-ru" data-lang="ru">Русский</a></li>
+										<li><a href="#" class="icon-ro" data-lang="ro">Romanian</a></li>
+									</ul>
+								</span>
+							</li>
+							<li><a href="#" class="btn btn-ghost" data-toggle="modal" data-target="#login-modal">Login</a></li>
+						</ul>
+					</nav>
+					<div class="nav-icon d-block d-lg-none">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div><!--End Nav Icon-->
+				</div><!--End Col 10-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</header>
+
+	<main class="bump-top-md bump-bottom-md">
+		<div class="container">
+
+			<h1 class="bump-bottom-md hu">Apply for a Loan</h1>
+			<div class="row">
+				<div class="col-lg-8 col-xl-9 bump-bottom-sm">
+					<div class="row bump-bottom-sm">
+						<div class="col-lg-4">
+							<div class="step step-icon-slider">
+								<strong>1.</strong> Select Your Terms
+							</div>
+						</div><!--End Col 4-->
+						<div class="col-lg-4 text-center">
+							<div class="step active step-icon-form">
+								<strong>2.</strong> Give Your Details
+							</div>
+						</div><!--End Col 4-->
+						<div class="col-lg-4 text-right">
+							<div class="step final step-icon-coins">
+								<strong>3.</strong> Receive Money
+							</div>
+						</div><!--End Col 4-->
+					</div><!--End Row-->
+
+					<form action="success.html" method="POST" id="application-form-step2">
+
+						<!--Begin Error
+						<div class="alert alert-danger">
+							<h5>Something went wrong!</h5>
+							<i class="fas fa-ban fa-fw text-danger"></i> This phone number is already associated with another account. Please use a different number or <a href="login.html" data-toggle="modal" data-target="#login-modal">click here to login</a>
+						</div>
+						//End Error-->
+
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="form-group">
+									<label for="first_name">First Name</label>
+									<input class="form-control" name="first_name" id="first_name" placeholder="Enter your first name" 
+										data-validation="required"
+										data-validation-error-msg="Please enter your first name"
+										data-sanitize="trim">
+								</div>
+							</div><!--End Col 6-->
+
+							<div class="col-xl-6">
+								<div class="form-group">
+									<label for="last_name">Last Name</label>
+									<input class="form-control" name="last_name" id="last_name" placeholder="Enter your last name" 
+									data-validation="required"
+									data-validation-error-msg="Please enter your last name"
+									data-sanitize="trim">
+								</div>
+							</div><!--End Col 6-->
+						</div><!--End Row-->
+
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="form-group">
+									<label for="jmbg">JMBG <span class="txt-grey light p14">(Your 13 digit unique master citizen number)</span></label>
+									<input class="form-control jmbg-mask has-help" name="jmbg" id="jmbg" placeholder="DDMMYYYRRBBBK" type="tel" 
+									data-validation="custom" 
+									data-validation-regexp="^(3[01]|[12][0-9]|0[1-9])(1[012]|0[1-9])((?:9|0)\d{2})(\d{2})(\d{3})(\d)$" 
+									data-validation-error-msg="Please enter your JMBG (13 digits)"
+									data-sanitize="trim">
+									<span class="helper">Example: DDMMYYYRRBBBK</span>
+								</div>
+							</div><!--End Col 6-->
+							<div class="col-xl-6">
+								<div class="form-group">
+									<label for="id_number" class="d-block">ID Card or Passport No.</label>
+									<input class="form-control id-mask has-help" name="id_number" id="id_number" placeholder="Example: N1234567" 
+									data-validation="required"
+									data-validation-error-msg="Please enter your ID Card or Passport No"
+									data-sanitize="trim upper">
+									<span class="helper">Example: N1234567</span>
+								</div>
+							</div><!--End Col 6-->
+						</div><!--End Row-->
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="form-group">
+									<label name="phone">Phone <span class="txt-grey light p14">(For receiving code to log in to your account)</span></label>
+									<input class="form-control phone-mask has-help" name="phone" id="phone" placeholder="(061) 123-456" type="tel" 
+									data-validation="custom" 
+									data-validation-regexp="^(\(\d{3}\))\s(\d{3})\-(\d{3})$"
+									data-validation-error-msg="Please enter your telephone number (9 digits)"
+									data-sanitize="trim">
+									<span class="helper">Example: (061) 123-456</span>
+								</div>
+							</div><!--End Col 6-->
+							<div class="col-xl-6">
+								<div class="form-group">
+									<label for="email">Email <span class="txt-grey light p14">(Optional)</span></label>
+									<input class="form-control" name="email" id="email" placeholder="example@email.com" type="email" 
+									data-validation="email" 
+									data-validation-optional="true"
+									data-sanitize="trim lower">
+								</div>
+							</div><!--End Col 6-->
+						</div><!--End Row-->
+						<hr>
+						<div class="row">
+							<div class="col-xl-6">
+								<h5 class="bump-bottom-sm">Create a New Account</h5>
+								<p class="p14 txt-grey">Create a new account on the site by entering a password. You'll use this password to log in to your private cabinet.</p>
+								<div class="form-group">
+									<label name="password">Password <span class="txt-grey light p14">(Enter a password of at least 6 characters)</span></label>
+									<input class="form-control" name="pass_confirmation" id="password" type="password"
+									data-validation="required length"
+									data-validation-length="min6"
+									data-validation-error-msg-length="Password must be at least 6 characters"
+									data-validation-error-msg="Please enter a password of at least 6 characters">
+								</div>
+								<div class="form-group">
+									<label name="pass">Confirm Password</label>
+									<input class="form-control" name="pass" id="confirm-password" type="password"
+									 data-validation="confirmation length"
+									 data-validation-length="min6"
+									 data-validation-error-msg-length="Password must be at least 6 characters"
+									 data-validation-error-msg="Password doesn't match">
+								</div>
+							</div><!--End Col 6-->
+							<div class="offset-xl-1 col-xl-5">
+								<div class="form-group">
+									<div class="details-box">
+										<div class="details-box-body">
+											<h5 class="bump-bottom-sm">Or Register with Social Network</h5>							
+											<p class="p14 txt-grey">Use your Facebook or Google account to register your account and access your private cabinet.</p>
+											<a href="#"><img src="images/login_facebook.png" alt="" style="max-width: 218px;"></a><br><br>
+											<a href="#"><img src="images/login_google.png" alt="" style="max-width: 218px;"></a>
+										</div>
+									</div>
+								</div>
+							</div><!--End Col 5-->
+						</div><!--End Row-->
+						<div class="chk-container bump-bottom-sm">
+							<span class="chkbox unchecked"></span> I accept the terms and conditions. <a href="#" class="txt-grey">Details here.</a>
+							<input type="checkbox" class="form-check-input" id="agreement" data-validation="required" style="visibility: hidden;">
+						</div>
+
+						<div class="form-gorup">
+							<input type="hidden" name="idtype" id="idtype" value="">
+							<button type="submit" class="btn btn-cta btn-lg">Next &nbsp; &raquo;</button>
+						</div>
+				
+					</form>
+
+				</div><!--End Col 9-->
+
+				<div class="col-lg-4 col-xl-3 bump-bottom-sm">
+					<div class="box grey-bg">
+						<div class="details-box-header">
+							<h3 class="bump-bottom-sm bump-top-none">Loan Details</h3>
+						</div>
+						<div class="details-box-body bump-bottom-xs">
+							<div class="d-flex loan-detail-row">
+								<div>
+									<span class="grey p14">Loan Amount</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="grey p14"><span>12,000</span> MKD</span>
+								</div>
+							</div>
+
+							<div class="d-flex loan-detail-row">
+								<div>
+									<span class="grey p14">Loan Term</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="grey p14"><span>20</span> Days</span>
+								</div>
+							</div>
+
+							<div class="d-flex loan-detail-row">
+								<div>
+									<span class="grey p14">Monthly Repayment</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="grey p14">5,000 MKD</span>
+								</div>
+							</div>
+
+							<div class="d-flex loan-detail-row">
+								<div>
+									<span class="grey p14">Annual Interest Rate</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="grey p14 ">0.00</span> %</span>
+								</div>
+							</div>
+
+							<div class="d-flex loan-detail-row">
+								<div>
+									<span class="grey p14">Extra Fees</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="grey p14">0 MKD</span>
+								</div>
+							</div>
+
+							<div class="d-flex loan-detail-row">
+								<div>
+									<span class="grey p14">Repayment Date</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="grey p14">30 March</span>
+								</div>
+							</div>
+							<div class="d-flex loan-detail-row">
+								<div>
+									<span class="grey p14 bold">Repayment Total</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="grey p14 bold">12,000 MKD</span>
+								</div>
+							</div>
+
+							<div class="text-center bump-top-sm">
+								<a href="start.html" class="btn btn-white"><i class="fas fa-pencil-alt fa-fw"></i> Edit</a>
+							</div>
+
+						</div>
+					</div><!--End Loan Details Box-->
+					<div class="text-center p15 bump-top-xs">
+						<i class="far fa-calendar-alt txt-light-green"></i>
+								<a href="#" class="dotted" data-toggle="modal" data-target="#schedule-modal">View Full Repayment Schedule</a>
+					</div>
+				</div><!--End Col 3-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</main><!--Application Form Step 2-->
+
+	<section id="contact-bar" class="grey-bg pad-top-sm">
+		<div class="container">
+			<div class="row">
+				<div class="offset-xl-1 col-sm-9 col-lg-6 bump-bottom-sm">
+					<h3>Need some help?</h3>
+					<p class="p16">Our operators are ready to help. Just call our number between office hours and we’ll help you complete your application.</p>
+				</div><!--End Col 3-->
+				<div class="col-12 col-lg-4 col-xl-3 bump-bottom-sm">
+					<h3><i class="fas fa-phone"></i> 051/ 492 610</h3>
+					<div class="p16"><i class="far fa-clock fa-fw"></i> Mon - Fri from 09:00 to 20:00<br>
+					<i class="far fa-clock fa-fw"></i> Sat from 09:00 to 17:00</div>
+				</div><!--End Col 3-->
+				<div class="col-lg-2 d-none d-sm-block">
+					<div id="cb-woman"></div>
+				</div><!--End Col 3-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</section><!--End Contact Bar-->
+
+	<footer class="pad-top-md pad-bottom-md darkgrey-bg txt-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 bump-bottom-sm align-self-center">
+					<a href="index.html" class="logo">
+						<img src="images/kreddy_logo_white.png" alt="Kreddy">
+					</a>
+				</div><!--End Col 3-->
+				<div class="col-lg-3 bump-bottom-sm">
+					<h5 class="bump-bottom-sm"><a href="index.html">Kreddy</a></h5>
+					<div class="p14">
+						<a href="index.html">Home</a><br>
+						<a href="about.html">About Us</a><br>
+						<a href="contact.html">Contact Us</a><br><br>
+						Select Language &nbsp; &nbsp;
+						<span class="language-selector white icon-ru">
+							<ul>
+								<li><a href="#" class="icon-ru" data-lang="ru">Русский</a></li>
+								<li><a href="#" class="icon-ro" data-lang="ro">Romanian</a></li>
+							</ul>
+						</span>
+					</div>
+				</div><!--End Col 3-->
+				<div class="col-lg-3 bump-bottom-sm">
+					<h5 class="bump-bottom-sm"><a href="start.html">Apply for a Loan</a></h5>
+					<div class="p14">
+						<a href="how-to-apply.html">How to apply</a><br>
+						<a href="repayments.html">Repayments</a><br>
+						<a href="faq.html">FAQ</a><br>
+						<a href="start.html">Apply Now</a>
+					</div>
+				</div><!--End Col 3-->
+				<div class="col-lg-3 bump-bottom-sm">
+					<h5 class="bump-bottom-sm"><a href="contact.html">Contact Us</a></h5>
+					<div class="p14">
+						<i class="fas fa-phone fa-fw"></i> <a href="tel:051492610">051/ 492 610</a><br>
+						<i class="fab fa-whatsapp fa-fw"></i> <a href="tel:065353353">065/ 353 353</a><br>
+						<i class="fas fa-paper-plane fa-fw"></i> <a href="mailto:info@kreddy.mk">info@kreddy.mk</a><br>
+						<i class="fab fa-facebook fa-fw"></i> <a href="#">Facebook</a><br>
+					</div>
+				</div><!--End Col 3-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</footer>
+	<section id="simple-footer" class="pad-top-xs pad-bottom-xs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-center text-md-left">
+					&copy; Copyright Digital Finance 2018
+				</div><!--End col 6-->
+				<div class="col-md-6 text-center text-md-right">
+					<a href="#">Privacy Policy</a> |
+					<a href="#">Terms of Use</a>
+				</div><!--End Col 6-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</section><!--End Simple Footer-->
+
+	<div class="modal fade" id="login-modal" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="container">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="row">
+						<div class="col-lg-5 grey-bg pad-top-sm left-radius-fix">
+							<h5 class="bump-bottom-sm">Log in with Social Network</h5>
+							<a href="dashboard.html"><img src="images/login_facebook.png" alt="" style="max-width: 218px;"></a><br><br>
+							<a href="dashboard.html"><img src="images/login_google.png" alt="" style="max-width: 218px;"></a><br><br>
+							<span class="p14"><strong>Not yet registered?</strong> Create your account by starting a new application.<br><br><a href="start.html">Click here to apply</a></span>
+						</div><!--End Col 4-->
+						<div class="col-lg-7 pad-top-sm">
+							<form class="" method="POST" action="dashboard.html" id="form-login-modal">
+								<h3 class="bump-bottom-sm">Log In</h3>
+								<p class="light">Log in to access your private account, make loan repayments, update your details and view your rewards.</p> 
+								<div class="form-group bump-bottom-xs">
+									<label for="login">Phone / Email</label>
+									<input class="form-control dont-mark" id="login" name="login" data-validation="required" data-sanitize="trim lower">
+								</div><!--End Form Group-->
+								<div class="form-group bump-bottom-xs">
+									<label for="password">Password</label>
+									<input class="form-control dont-mark" type="password" id="password" name="password" data-validation="required">
+								</div><!--End Form Group-->
+								<div class="form-group bump-bottom-xs">
+									<div class="chk-container bump-bottom-sm">
+										<span class="chkbox checked"></span> Remember Me
+										<input type="checkbox" class="form-check-input" id="agreement" checked style="visibility: hidden;">
+									</div>
+								</div>
+								<div class="form-group text-center">
+									<button type="submit" id="login-submit-button" class="btn btn-cta btn-lg">Login</button>
+									<br><br><span class="p14"><a href="forgotten-password.html">Forgot Your Password?</a></span>
+								</div>
+							</form>
+						</div><!--End Col 8-->
+					</div><!--End Row-->
+				</div><!--End Container-->
+			</div><!--End Model Content-->
+		</div><!--End Modal Dialogue-->
+	</div><!--End Login Modal-->
+
+	<div class="modal fade" id="schedule-modal" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="container">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h3 class="bump-top-sm bump-bottom-sm text-center">Repayment Schedule</h3>
+					<table class="table table-bordered table-sm table-hover table-sm-responsive table-schedule">
+						<thead class="grey-bg">
+							<tr>
+								<th scope="col" style="width: 5%;">#</th>
+								<th scope="col" style="width: 35%;">Date</th>
+								<th scope="col" style="width: 20%;">Principal</th>
+								<th scope="col" style="width: 20%;">Interest</th>
+								<th scope="col" style="width: 20%;">Balance</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>30/09/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>90,000 MKD</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>31/10/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>80,000 MKD</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>30/11/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>70,000 MKD</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>31/12/2018</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>60,000 MKD</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>31/01/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>50,000 MKD</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>31/01/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>40,000 MKD</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>28/02/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>30,000 MKD</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>31/03/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>20,000 MKD</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>30/04/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>10,000 MKD</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>31/05/2019</td>
+								<td>10,000 MKD</td>
+								<td>1000 MKD</td>
+								<td>0 MKD</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!--End Container-->
+			</div><!--End Model Content-->
+		</div><!--End Modal Dialogue-->
+	</div><!--End Schedule Modal-->
+
+	<div id="mobile-menu">
+		<h5>Main Menu</h5>
+		<a href="how-to-apply.html">How to Apply</a>
+		<a href="faq.html">FAQ</a>
+		<a href="repayments.html">Repayments</a>
+		<a href="tel:051492610"><i class="fas fa-phone fa-fw"></i> 051/ 492 610</a>
+		<a href="#"><i class="fas fa-flag fa-fw"></i> Рус / Rom</a>		
+		<br>
+		<a href="start.html" class="btn btn-cta btn-lg" style="margin: 0 auto; width: 85%;">Apply Now</a>
+	</div><!--End Mobile Menu-->
+
+	<!--Scripts-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
+	<script src="js/util.min.js"></script>
+	<script src="js/modal.min.js"></script>
+	<script src="js/jquery.inputmask.min.js"></script>
+	<script src="js/wNumb.min.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/repaymentcalculator.js"></script>
+	<script src="js/app.js"></script>
+
+	<script>
+		$(function(){
+
+			$("#application-form-step2").on("submit", function(){
+				alert("Form would submit and go to next step");
+			});
+		});
+
+	</script>
+
+</body>
+</html>
