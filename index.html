@@ -34,11 +34,82 @@
 	<!--Stylesheet-->
 	<link rel="stylesheet" href="css/style.css">
 	
+<style>
+
+	#partners-top {
+		display: none;
+	}
+
+	ul.partner-logos {
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0px;
+	}
+
+	ul.partner-logos li {
+		background-color: #fff;
+		padding: 5px;
+		border: 1px solid #edeaf8;
+		margin-bottom: 10px;
+	}
+
+	ul.partner-logos li img {
+		max-width: 120px;
+		height: auto;
+	}
+
+	#partners-menu-item {
+		padding-right: 5px;
+		position: relative;
+	}
+
+	#partners-menu-item:after {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 4px 3px 0 3px;
+		border-color: #000 transparent transparent;
+
+		position: absolute;
+		right: -10px;
+		top: 50%;
+		margin-top: -2px;
+		content: '';
+	}
+
+	#partners-menu-item.open:after {
+		border-width: 0 3px 4px 3px;
+		border-color: transparent transparent #000 ;
+	}
+</style>
 
 
 </head>
 <body>
-
+	<section id="partners-top" class="pad-top-sm pad-bottom-sm blue-bg txt-white">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<h3 class="txt-white">Partners</h3>
+					<p>Кај нашите партнери можете да купувате на кредит до 24 рати, до 120.000 денари и тоа само со лична карта. Одобрувањето е Веднаш!</p>
+					<a href="#">Learn more</a>
+				</div>
+				<div class="col-lg-6">
+					<ul class="partner-logos">
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!--End Container-->
+	</section><!--End Partners-->
 	<section id="hero">
 		<header class="bump-bottom-md">
 			<div class="container">
@@ -56,6 +127,7 @@
 							<ul>
 								<li><a href="how-to-apply.html">How to Apply</a></li>
 								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="partners.html" id="partners-menu-item">Partners</a></li>
 								<li><a href="repayments.html">Repayments</a></li>
 								<li>
 									<span class="language-selector icon-ru">
@@ -85,7 +157,7 @@
 						<div id="caption-box">
 							<h1>3 to 12* Month
 							Installment Loans
-							up to <span class="no-wrap">100,000 MKD</span></h1>
+							up to <span class="no-wrap">100,000 ден</span></h1>
 							<blockquote>
 								<p>“Kreddy gave us an easy way to get a loan without dealing with the banks.”</p>
 								<cite>-  BOJAN AND ALEKSANDRA, SKOPJE</cite>
@@ -98,11 +170,11 @@
 						<div class="calculator-top">
 							<div class="d-flex align-items-center bump-bottom-xs">
 								<div>
-									<label class="noUi-label">Choose Amount:<span class="d-block d-lg-none slider-value-unit"> <small>(MKD)</small></span></label>
+									<label class="noUi-label"> Одберете износ:<span class="d-block slider-value-unit"> <small>(ден)</small></span></label>
 								</div>
 								<div class="ml-auto text-right">
 									<span class="slider-value">
-										<input type="tel" class="slider-value-amount" id="loanamount_text" value="200"> <span class="slider-value-unit d-none d-lg-inline">MKD</span>
+										<input type="tel" class="slider-value-amount" id="loanamount_text" value="200">
 									</span><!--End Slider Value-->
 								</div>
 							</div><!--End Flex-->
@@ -112,19 +184,19 @@
 							</div><!--End Slider Amount-->
 							<div class="d-flex bump-bottom-sm txt-fade-green">
 								<div>
-									<span class="p12">10,000 MKD</span>
+									<span class="p12">10,000 ден</span>
 								</div>
 								<div class="ml-auto text-right">
-									<span class="p12">100,000 MKD</span>
+									<span class="p12">100,000 ден</span>
 								</div>
 							</div><!--End Row-->
 							<div class="d-flex align-items-center bump-bottom-xs">
 								<div>
-									<label class="noUi-label">Choose Term:<span class="slider-value-unit d-block d-lg-none"> <small>(MONTHS)</small></span></label></label>
+									<label class="noUi-label">Одберете период на отплата:<span class="slider-value-unit d-block"> <small>(Месеци)</small></span></label></label>
 								</div>
 								<div class="ml-auto text-right">
 									<span class="slider-value">
-										<input type="tel" class="slider-value-amount" id="loanterm_text" value="20" style="width: 40px;"> <span class="slider-value-unit d-none d-lg-inline">MON</span>
+										<input type="tel" class="slider-value-amount" id="loanterm_text" value="20" style="width: 40px;">
 									</span><!--End Slider Value-->
 								</div>
 							</div><!--End Row-->
@@ -134,52 +206,88 @@
 							</div><!--End Slider Amount-->
 							<div class="d-flex bump-bottom-sm txt-fade-green">
 								<div>
-									<span class="p12">3 Months</span>
+									<span class="p12">3 Месеци</span>
 								</div>
 								<div class="ml-auto text-right">
-									<span class="p12">12 Months</span>
+									<span class="p12">12 Месеци</span>
 								</div>
 							</div><!--End Row-->
+							<div class="bump-bottom-sm">
+								<div class="chk-container d-flex">
+									<span class="chkbox contrast unchecked"></span>
+									<div class="chk-label">
+										Се согласувам со условите <a href="https://kreddy.mk/page-message/?type=st_inf_list_mk" target="_blank">прочитајте го</a>
+									</div>
+									<input type="checkbox" data-validation="required" class="form-check-input" id="st_inf_list" name="st_inf_list" style="visibility: hidden;"data-validation-error-msg="Ова поле е задолжително">
+								</div>
+							</div>
+							
 							<div class="text-center">
-								<button type="submit" class="btn btn-cta btn-lg apply-button apply-button-calculator" id="apply-button-home-main">Apply Now</button>
+
+								<button type="submit" class="btn btn-cta btn-lg apply-button apply-button-calculator" id="apply-button-home-main">Аплицирај сега!</button>
 							</div>
 						</div><!--End Calculator Top-->
 
 						<div class="calculator-bottom">
 							<div class="loan-detail-row d-flex">
 								<div>
-									<span class="grey p15">Monthly Repayment</span>
+									<span class="p15">Вкупно провизиjа <small>(СВТ <span class="loan-rate-display">0</span>%)</small></span>
 								</div>
 								<div class="ml-auto text-right">
-									<span class="grey p15"><span class="monthly-repayment-display">0</span> MKD</span>
-								</div>
-							</div><!--End Row-->
-							<div class="loan-detail-row d-flex">
-								<div>
-									<span class="grey p15">Annual Interest Rate</span>
-								</div>
-								<div class="ml-auto text-right">
-									<span class="grey p15"><span class="loan-apr-display">0.00</span> %</span>
-								</div>
-							</div><!--End Row-->
-							<div class="loan-detail-row d-flex">
-								<div>
-									<span class="grey p15">Extra Fees</span>
-								</div>
-								<div class="ml-auto text-right">
-									<span class="grey p15"><span class="loan-fee-display">0</span> MKD</span>
+									<span class="p15"><span class="loan-interest-display">0</span> Ден</span>
 								</div>
 							</div><!--End Row-->
 
-							<div class="loan-detail-row d-flex semi-bold txt-blue">
+							<div class="loan-detail-row d-flex">
 								<div>
-									<span class="p15">Total Repayment</span>
+									<span class="p15">Вкупен износ за отплата</span>
 								</div>
 								<div class="ml-auto text-right">
-									<span class="loan-repayment-display">30000</span> <span class="slider-value-unit">MKD</span>
+									<span class="p15"><span class="loan-repayment-display">30000</span> Ден</span>
 								</div>
 							</div><!--End Row-->
-							<div class="text-center p15 bump-top-xs">
+
+							<div class="loan-detail-row d-flex">
+								<div>
+									<span class="p15">Датум на отплата</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="p15"><span class="loan-date-display">01.01.2019</span></span>
+								</div>
+							</div><!--End Row-->
+
+							<div class="loan-detail-row d-flex">
+								<div>
+									<span class="p15">Број на рати</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="p15"><span class="loan-repayments-display">0</span> рати</span>
+								</div>
+							</div><!--End Row-->
+  
+
+							<div class="loan-detail-row d-flex">
+								<div>
+									<span class="txt-lightgrey p15">Износ на рата без гарант</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="txt-lightgrey p15"><span class="monthly-repayment-guarantor-display">0</span> Ден</span>
+								</div>
+							</div><!--End Row-->
+							
+
+							<div class="loan-detail-row d-flex semi-bold txt-blue">
+								<div>
+									<span class="p15">
+										Износ на рата
+										<span class="dotted txt-blue" data-toggle="tooltip" data-placement="top" title="" data-original-title="Price calculated is subject to supplying guarantor within three days of signing loan agreement"><i class="fas fa-info-circle"></i></span>
+									</span>
+								</div>
+								<div class="ml-auto text-right">
+									<span class="monthly-repayment-display">30000</span> <span class="slider-value-unit">Ден</span>
+								</div>
+							</div><!--End Row-->
+							<div class="text-center p15 bump-top-xs d-none">
 								<i class="far fa-calendar-alt txt-light-green"></i>
 								<a href="#" class="dotted" data-toggle="modal" data-target="#schedule-modal">View Full Repayment Schedule</a>
 							</div>
@@ -431,6 +539,27 @@
 		</div><!--End Container-->
 	</section><!--End Testimonial-->
 
+	<section id="partners" class="pad-top-md pad-bottom-md">
+		<div class="container">
+			<h2 class="bump-bottom-md text-center txt-light-green">Our Partners</h2>
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<ul class="partner-logos bump-bottom-sm">
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+						<li><a href="#"><img src="images/logo-placeholder.png" alt=""></a></li>
+					</ul>
+					<p>Кај нашите партнери можете да купувате на кредит до 24 рати, до 120.000 денари и тоа само со лична карта. Одобрувањето е Веднаш!</p>
+					<a href="#">Learn more</a>
+				</div><!--End Col 8-->
+			</div><!--End Row-->
+		</div><!--End Container-->
+	</section><!--End Partners-->
+
 	<section id="bottom-cta" class="pad-top-md pad-bottom-md blue-bg">
 		<div class="container">
 			<h3 class="text-center bump-bottom-md txt-white">Get Money in Your Account in 15 Minutes</h2>
@@ -652,13 +781,34 @@
 	<!--Scripts-->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
+	<script src="js/popper.min.js"></script>
 	<script src="js/util.min.js"></script>
 	<script src="js/modal.min.js"></script>
+	<script src="js/tooltip.min.js"></script>
 	<script src="js/jquery.inputmask.min.js"></script>
 	<script src="js/wNumb.min.js"></script>
 	<script src="js/nouislider.min.js"></script>
+	<script src="js/moment.js"></script>
 	<script src="js/repaymentcalculator.js"></script>
 	<script src="js/app.js"></script>
+
+	<script>
+		$(function(){
+
+			$('[data-toggle="tooltip"]').tooltip();
+
+			$("#partners-menu-item").on("click", function(e){
+				e.preventDefault();
+				if($(this).hasClass('open')){
+					$(this).removeClass("open");
+					$("#partners-top").slideUp();	
+				} else {
+					$(this).addClass("open");
+					$("#partners-top").slideDown();
+				}
+			});
+		});
+	</script>
 
 </body>
 </html>

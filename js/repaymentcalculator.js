@@ -22,7 +22,7 @@ var sliderterm = document.getElementById('sliderterm');
 var sliderTermOptions = {
 	start: 6,
 	step: 1,
-	min: 1,
+	min: 3,
 	max: 12,
 }
 
@@ -87,32 +87,87 @@ $(function(){
 });
 
 
-
 function calculateRepayment(loan_term, loan_amount){
 
-	var interest = 0;
-	var fee = 0;
-	var repayment = 0;
-	var monthly_repayment;
-	
-	//Calculate Repayment - More complex calculations would be here but this is just a demo
-	repayment_amount = loan_amount;
-	monthly_repayment = loan_amount / loan_term;
+	//Set the variables
+	var annual_rate = 52.15;
+	var annual_rate_without = 60;
+	var periods = loan_term;
+	var rate = annual_rate / 100 / 12;
+	var rate_without = annual_rate_without / 100 / 12;
 
-	//Calculate Repayment Date
-	var dueDate = new Date();
-	dueDate.setTime(dueDate.getTime() + loan_term * 24 * 60 * 60 * 1000);
-	var repayment_date = dueDate.getDate() + " ";  
-	repayment_date += getMonth(dueDate.getMonth());  
+	//Calculate the repayment amount
+	var x = Math.pow(1 + rate, periods);
+	var payment_amount = (loan_amount * x * rate) / (x - 1);
+
+	var y = Math.pow(1 + rate_without, periods);
+	var payment_amount_without = (loan_amount * y * rate_without) / (y - 1);
+
+	//Create the loan schedule
+	var schedule = "";
+	var interest_accrued = 0;
+	var interest_generated = 0;
+	var repayment_amount = 0;
+	var balance = loan_amount;
+	var principal = 0;
+
+	//Calculate Start Date
+    var startDate = new Date();
+
+	for ( var i=0; i < periods; i++) { 
+
+		interest_generated = balance * rate;
+		repayment_amount += payment_amount;
+		interest_accrued += interest_generated;
+	  	principal = payment_amount - interest_generated;
+	  	balance = balance + interest_generated - payment_amount;
+	  	var paymentDate = $("#isrepeat").val() === 'false' ? addMonths(startDate, (i+3)) : addMonths(startDate, (i+1));
+	  	if(i == 0)
+	  		var first_date = formatPaymentDate(paymentDate); 
 
 
+	  // Append a row to the table
+		schedule += '<tr>';
+		schedule += '<td>'+(i+1)+'</td>';
+		schedule += '<td>'+ formatPaymentDate(paymentDate) + '</td>';
+		schedule += '<td>'+ moneyFormD.to(payment_amount) +'</td>';
+		schedule += '<td>'+ moneyFormD.to(interest_generated) +'</td>';
+		schedule += '<td>'+ moneyFormD.to(principal) +'</td>';
+		schedule += '<td>'+ moneyFormD.to(balance) +'</td>';
+		schedule += '</tr>';
+	}
 
+	var dueDate = new moment();
+	dueDate.add(loan_term, 'months');
+	var repayment_date = dueDate.format('DD.MM.YYYY');
 
-	payload = { amount: loan_amount, term: loan_term, interest: interest, fee: fee, repayment: repayment_amount, monthly_repayment: monthly_repayment, date: repayment_date, day: dueDate.getDate(), month: getMonth(dueDate.getMonth()) };
+	payload = { 
+		amount: loan_amount,
+		term: loan_term,
+		interest_rate: annual_rate,
+		interest: interest_accrued,
+		guarantor_repayment: payment_amount_without,
+		repayment: repayment_amount,
+		monthly_repayment: payment_amount,
+		first_date: first_date,
+		schedule: schedule,
+		date: repayment_date
+	};
+
 
 	return payload;
 }
 
+function addMonths (date, count) {
+	if (date && count) {
+		var m, d = (date = new Date(+date)).getDate();
+		date.setMonth(date.getMonth() + count, 1);
+		m = date.getMonth();
+		date.setDate(d);
+		if (date.getMonth() !== m) date.setDate(0);
+	}
+	return date;
+}
 
 
 function displayLoanInfo(){
@@ -137,14 +192,23 @@ function displayLoanInfo(){
 	//Display Loan Term
 	$("#loanterm_text").val(payload.term);
 	$(".loan-term-display").html(payload.term);
+	$(".loan-repayments-display").html(payload.term);
 
 	//Display Interest
-	$(".loan-interest-display").html(moneyFormD.to(payload.interest));
+	$(".loan-interest-display").html(moneyForm.to(payload.interest));
 
-	//Display Fee
-	$(".loan-fee-display").html(moneyForm.to(payload.fee));
+	//Display APR
+	$(".loan-rate-display").html(moneyFormD.to(payload.interest_rate));
 
+	//Display Loan Date
+	$('.loan-date-display').html(payload.date);
+
+	//Monthy Repayment
 	$(".monthly-repayment-display").html(moneyForm.to(payload.monthly_repayment));
+
+	//Monthly Repayment Without Guarantor
+	$(".monthly-repayment-guarantor-display").html(moneyForm.to(payload.guarantor_repayment));
+	
 
 	//Display the Repayment Amount
 	$(".loan-repayment-display").html(moneyForm.to(payload.repayment));
@@ -154,22 +218,14 @@ function displayLoanInfo(){
 //Helper Functions
 
 var moneyForm = wNumb({
-	thousand: ',',
+	thousand: ' ',
 	decimals: 0
 });
 
 var moneyFormD = wNumb({
-	thousand: ',',
+	thousand: ' ',
 	decimals: 2
 });
-
-function getMonth(month){
-	var monthNames = ["January", "February", "March", "Aprix", "May", "June", "July", "August", "September", "October", "November", "December"];
-	var monthNamesAbr = ["Jan", "Feb ", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
-	var output = monthNamesAbr[month];
-	return output;
-}
 
 function debounce(func, delay) {
 	var inDebounce = void 0;
@@ -182,6 +238,16 @@ function debounce(func, delay) {
 		delay);
 	};
 }
+
+function formatPaymentDate(date){
+	var output = (date.getDate() < 10) ? '0' : '';
+	output += date.getDate() + '.';
+	output += ((date.getMonth() + 1) < 10) ? '0' : '';
+	output += (date.getMonth() + 1) + '.';
+	output += date.getFullYear();
+	return output;
+}
+
 
 slideramount.noUiSlider.on('update', function(){
 	displayLoanInfo();

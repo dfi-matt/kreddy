@@ -44,7 +44,7 @@ a:hover {
 	color: #0f3c64;
 }
 
-a.dotted {
+a.dotted, .dotted {
 	border-bottom: 1px dotted; 
 }
 
@@ -52,6 +52,8 @@ a.dotted:hover {
 	text-decoration: none;
 	border-color: inherit;
 }
+
+
 
 h1 {
 	font-size: 50px;
@@ -1660,11 +1662,27 @@ span.help-block.form-error {
 	position: relative;
 	top: 8px;
 }
+.chk-container.d-flex {
+	flex-wrap: wrap;
+}
+
+.chk-container.d-flex .chkbox {
+  flex-shrink: 1;
+}
+
+.chk-container.d-flex .chk-label {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.chk-container.d-flex .form-error {
+	flex: 0 0 100%;
+}
 
 span.chkbox {
 	width: 32px;
 	height: 32px;
-	background: #0f3c64 url('../images/checkbox.png') no-repeat center top;
+	background: #ebedf2 url('../images/checkbox_blue.png') no-repeat center top;
 	background-size: 32px 64px;
 	display: inline-block;
 	margin-right: 5px;
@@ -1676,6 +1694,7 @@ span.chkbox {
 
 span.chkbox.white-bg {
 	background-color: #fff;
+	background-image: url('../images/checkbox_blue.png');
 }
 
 span.unchecked {
@@ -1689,6 +1708,10 @@ span.unchecked {
 
 .table-schedule td, .table-schedule th {
 	white-space: nowrap;
+}
+
+.calculator-top a:hover, .blue-bg a:hover {
+	color: #fff;
 }
 
 
@@ -1830,4 +1853,30 @@ Dashboard
 
 #mobile-account-nav > li > a:hover {
 	text-decoration: none;
+}
+
+
+
+/*----------------------------------------
+Tool Tips
+---------------------------------------*/
+
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: #0f3c64;
+}
+
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  border-right-color: #0f3c64;
+}
+
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  border-bottom-color: #0f3c64;
+}
+
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: #0f3c64;
+}
+
+.tooltip-inner {
+  background-color: #0f3c64;
 }
